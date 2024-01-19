@@ -2,7 +2,8 @@ import GlobalStyles from '@/styles/app.styles';
 import { NextPage } from 'next';
 import type { AppProps } from 'next/app';
 import { Noto_Sans } from 'next/font/google';
-import { ReactElement, ReactNode } from 'react';
+import { ReactElement, ReactNode } from 'react';7
+import "../styles/global.css"
 
 const noto_sans = Noto_Sans({
   subsets: ['latin'],
