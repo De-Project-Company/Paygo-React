@@ -1,0 +1,34 @@
+.fullBleed {
+	padding: 1rem 2rem;
+
+	@media screen and (min-width: 65.625rem) {
+		padding-inline:  4rem;
+	}
+
+	@media screen and (min-width: 90em) {
+		padding-inline:  calc(var(--extra-width) / 2);
+	}
+}
+
+.btn {
+	background-color: var(--primary500);
+	padding: 1rem 3rem;
+	color: var(--white);
+	font-weight: 700;
+	border-radius: 8px;
+}
+
+.overlayContainer {
+	width: 100%;
+	height: 100vh;
+	position: fixed;
+	top: 0; 
+	left: 0;
+	background-color: var(--primary500);
+	opacity: 0.3;
+	z-index: 1;
+
+	@media screen and (min-width: 56.3125em) {
+		display: none;
+	}
+}
