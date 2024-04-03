@@ -5,7 +5,6 @@ import RoutesFiles from "./components/Routes";
 const App = () => {
   return (
     <Router>
-      {/* <Link /> */}
       <RoutesFiles />
     </Router>
   );
