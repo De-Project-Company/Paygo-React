@@ -662,11 +662,16 @@
       position: relative;
       right: -2rem;
       z-index: 1;
+      padding-left: 10rem;
+
+      & > p {
+        margin-bottom: 3rem;
+      }
     }
   }
 
   @media screen and (min-width: 62.5em) {
-    & > div {
+    & > div:first-of-type {
       & > h3 {
         font-size: 3rem;
       }
