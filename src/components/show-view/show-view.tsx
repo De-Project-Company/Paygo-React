@@ -1,11 +1,11 @@
 import { ReactNode } from 'react';
 
 interface IShowViewProps {
-   when: boolean;
-   children: ReactNode | null;
+  when: boolean;
+  children: ReactNode | null;
 }
 const ShowView = ({ when, children }: IShowViewProps) => {
-   return <>{when ? children : null}</>;
+  return <>{when ? children : null}</>;
 };
 
 export default ShowView;

@@ -1,14 +1,13 @@
 .logo {
-   display: block;
-   
-   & > img {
-      width: 8rem;
-      height: 4rem;
-      object-fit: contain;
-      
-      @media screen and (min-width: 56.25em) {
-         width: 10rem;
-         
-      }
-   }
+  display: block;
+
+  & > img {
+    width: 8rem;
+    height: 4rem;
+    object-fit: contain;
+
+    @media screen and (min-width: 56.25em) {
+      width: 10rem;
+    }
+  }
 }

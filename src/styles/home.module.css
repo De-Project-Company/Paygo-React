@@ -1,0 +1,701 @@
+.heroSection {
+  position: relative;
+}
+
+.heroSubContainer {
+  color: var(--white);
+  text-align: center;
+
+  @media screen and (min-width: 56.25em) {
+    text-align: left;
+  }
+
+  @media screen and (min-width: 56.25em) {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    & > div {
+      flex-basis: 50%;
+    }
+  }
+}
+
+.sectionPadding {
+  padding-block: 5rem 10rem;
+  position: relative;
+
+  @media screen and (min-width: 56.25em) {
+    padding-bottom: 12rem;
+  }
+
+  @media screen and (min-width: 75em) {
+    padding-bottom: 17rem;
+  }
+}
+
+.heroBg {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.heroTextContainer {
+  padding-block: 3rem;
+
+  @media screen and (min-width: 56.25em) {
+    padding-block: 6rem 10rem;
+  }
+}
+
+.headText {
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 2rem;
+  font-weight: 700;
+  font-family: 'Space Grotesk', sans-serif;
+
+  @media screen and (min-width: 43.75em) {
+    width: 90%;
+    margin-top: 4.75rem;
+    font-size: 4rem;
+  }
+
+  @media screen and (min-width: 56.25em) {
+    text-align: left;
+  }
+
+  @media screen and (min-width: 75em) {
+    font-size: 6rem;
+  }
+}
+
+.heroBtn {
+  margin: 3rem auto;
+  display: block;
+  width: max-content;
+
+  @media screen and (min-width: 56.25em) {
+    margin-inline: 0;
+  }
+}
+
+.heroImagesContainer {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+
+  & > .overlayImageBg {
+    position: absolute;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.heroBottomImg {
+  width: 100%;
+}
+
+.sectionHeaderText {
+  font-weight: 500;
+  font-size: 2rem;
+
+  & > span {
+    color: var(--primary700);
+  }
+
+  @media screen and (min-width: 48em) {
+    font-size: 3rem;
+  }
+
+  @media screen and (min-width: 62.5em) {
+    font-size: 4rem;
+  }
+
+  @media screen and (min-width: 75em) {
+    font-size: 5rem;
+  }
+}
+
+.coreFeaturesSection {
+  padding-block: 5rem;
+  background-color: var(--primary200);
+}
+
+.coreFeaturesFlex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 4rem;
+}
+
+.coreFeatureCard {
+  background-color: var(--white);
+  padding: 2rem;
+  border-radius: 8px;
+  font-family: 'Space Grotesk', sans-serif;
+
+  & > p:first-of-type {
+    font-weight: 700;
+    font-size: 2rem;
+    margin-block: 1rem;
+  }
+
+  @media screen and (min-width: 37.5em) {
+    max-width: 35rem;
+    margin-block: 1.5rem;
+  }
+
+  @media screen and (min-width: 75em) {
+    max-width: 32%;
+  }
+}
+
+.coreFeatureIconContainer {
+  overflow: hidden;
+  padding: 1rem;
+  box-sizing: border-box;
+  background-color: var(--primary200);
+  width: max-content;
+  border-radius: 50%;
+
+  & > svg {
+    fill: var(--primary700);
+    width: 3rem;
+    height: 3rem;
+  }
+}
+
+.benefitsSection {
+  padding-block: 5rem;
+
+  & > div {
+    margin-inline: auto;
+  }
+
+  @media screen and (min-width: 51.9375em) {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+
+    & > div {
+      margin-inline: 0;
+    }
+  }
+}
+
+.benefitsSectionImageContainer {
+  position: relative;
+  display: block;
+  max-width: 45rem;
+  overflow: hidden;
+  height: inherit;
+  display: flex;
+  align-items: flex-end;
+
+  & > img:first-of-type {
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+  }
+}
+
+.benefitsTextContainer {
+  margin-top: 5rem;
+  flex-basis: 50%;
+  max-width: 60rem;
+}
+
+.benefitsSubHeader {
+  text-transform: uppercase;
+  margin-top: 2rem;
+}
+
+.benefitsList {
+  margin: 2rem 0;
+  & > li {
+    margin-left: 3rem;
+    margin-bottom: 1.6rem;
+    position: relative;
+    padding-left: 8px;
+
+    & > p:first-of-type {
+      font-weight: 500;
+      font-size: 1.8rem;
+      margin-bottom: 4px;
+
+      @media screen and (min-width: 56.25em) {
+        font-size: 2rem;
+      }
+    }
+
+    &::before {
+      content: url('../../public/assets/benefits-list-icon.svg');
+      position: absolute;
+      left: -3rem;
+      top: 5px;
+    }
+  }
+}
+
+.howItWorksSection {
+  background-color: var(--white);
+  position: relative;
+  overflow: hidden;
+
+  & > div {
+    background-color: var(--primary700);
+    color: var(--white);
+    text-align: center;
+    padding: 5rem 3rem;
+    border-radius: 2.4rem;
+  }
+}
+
+.howItWorksData {
+  margin-top: 3rem;
+  width: 100%;
+  margin-inline: auto;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 4rem;
+  flex-wrap: wrap;
+
+  & > div {
+    max-width: 29rem;
+    padding: 2rem 0;
+    z-index: 1;
+
+    & > p:first-of-type {
+      font-family: 'Space Grotesk', sans-serif;
+    }
+  }
+}
+
+.howItWorksSvgContainer {
+  border-radius: 50%;
+  background-color: var(--primary700);
+  width: max-content;
+  height: max-content;
+  padding: 1rem;
+  border: 8px solid var(--white);
+  margin: 1rem auto;
+
+  & > svg {
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+}
+
+.howItWorksTextContainer {
+  & > p:first-child {
+    font-weight: 700;
+    font-size: 2rem;
+  }
+}
+
+.blurredBg {
+  height: 15rem;
+  width: 40%;
+  position: absolute;
+  bottom: 5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--primary700);
+  z-index: -0;
+  border-radius: 50%;
+  filter: blur(3rem);
+}
+
+.testimonialSection {
+  background: linear-gradient(to bottom, #f7f7f7, #f7f7f700);
+  text-align: center;
+
+  @media screen and (min-width: 56.25em) {
+    padding-top: 10rem;
+  }
+}
+
+.testimonialEclipseImg {
+  position: absolute;
+  top: -8rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 90rem;
+  height: 100%;
+  max-height: 27rem;
+  overflow: hidden;
+  margin: 0 auto;
+
+  & > img {
+    width: 100%;
+    height: auto;
+  }
+
+  @media screen and (min-width: 56.25em) {
+    top: -12rem;
+  }
+}
+
+.testimonyCard {
+  box-shadow: 0 1.3rem 3.3rem 0 #257a4926;
+  max-width: 60rem;
+
+  & > div:first-of-type {
+    width: 100%;
+    height: 30rem;
+    overflow: hidden;
+
+    & > img {
+      width: inherit;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  & > div:not(:first-of-type) {
+    padding: 2rem 1rem;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+
+  @media screen and (min-width: 43.75em) {
+    display: flex;
+
+    & > div:first-of-type {
+      height: 100%;
+      max-width: 30rem;
+    }
+  }
+}
+
+.testimonyQuoteMark {
+  & > svg {
+    width: 4.5rem;
+    height: 4.5rem;
+    fill: var(--primary700);
+
+    @media screen and (min-width: 43.75em) {
+      width: 6.5rem;
+      height: 6.5rem;
+    }
+  }
+}
+
+.testimoniesFlexContainer {
+  display: flex;
+  justify-content: center;
+  margin-block: 3rem;
+  gap: 2rem;
+
+  @media screen and (min-width: 43.75em) {
+    height: 32rem;
+    max-width: 100rem;
+    margin-inline: auto;
+  }
+}
+
+.testimonyPaginationButton {
+  display: none;
+
+  @media screen and (min-width: 43.75em) {
+    height: inherit;
+    width: 100%;
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & > img {
+      width: inherit;
+      height: inherit;
+      object-fit: cover;
+      filter: brightness(0.5);
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    & > svg {
+      width: 90%;
+      height: 4.5rem;
+      fill: white;
+      z-index: 5;
+    }
+  }
+}
+
+.mobilePagination {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+  height: max-content;
+
+  & > button {
+    padding: 1rem;
+    border-radius: 50%;
+    width: max-content;
+    box-shadow: 0 1.3rem 3.3rem 0 #257a4926;
+    background-color: var(--white);
+
+    & > svg {
+      fill: var(--primary700);
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+
+  @media screen and (min-width: 43.75em) {
+    display: none;
+  }
+}
+
+.pricingSection {
+  background-color: #f0f0f0;
+  text-align: center;
+}
+
+.pricingFlexContainer {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  justify-content: center;
+  margin-block: 3rem;
+  flex-wrap: wrap;
+}
+
+.pricingCard {
+  background-color: var(--white);
+  border-radius: 8px;
+  padding: 4rem 3rem;
+  width: 100%;
+  height: 35rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 30rem;
+  transition: transform 0.2s ease-in-out;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  & > div {
+    & > h3 {
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 2.5rem;
+    }
+
+    & > p:first-of-type {
+      color: var(--primary700);
+      font-weight: 700;
+      font-size: 3rem;
+      margin: 2rem 0;
+      text-transform: uppercase;
+    }
+  }
+
+  & > button {
+    background-color: var(--primary700);
+    color: var(--white);
+    padding: 1rem;
+    font-weight: 600;
+    border-radius: inherit;
+  }
+
+  &.secondary {
+    background-color: var(--primary700);
+    color: var(--white);
+
+    & > div {
+      & > p:first-of-type {
+        color: var(--white);
+      }
+    }
+
+    & > button {
+      background-color: var(--white);
+      color: var(--primary700);
+    }
+  }
+}
+
+.automatedInvoicingSection {
+  position: relative;
+  margin-bottom: 3rem;
+
+  & > div {
+    max-width: 100rem;
+    margin-inline: auto;
+    position: relative;
+
+    & > div:not(:first-child, :last-child) {
+      color: var(--white);
+      padding: 3rem 2rem;
+      text-align: center;
+
+      & > p {
+        margin-bottom: 2rem;
+      }
+
+      & > p:first-of-type {
+        font-size: 2rem;
+        font-weight: 700;
+      }
+    }
+
+    @media screen and (min-width: 43.75em) {
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      gap: 2rem;
+
+      & > div:first-child {
+        width: 100%;
+        max-width: 40rem;
+      }
+
+      & > div:not(:first-child, :last-child) {
+        padding: 3rem 2rem;
+        align-self: flex-end;
+        text-align: left;
+
+        & > p:first-of-type {
+          font-size: 2.5rem;
+        }
+      }
+    }
+
+    @media screen and (min-width: 62.5em) {
+      max-width: 100%;
+      --section-padding: calc(100% - 100rem);
+      padding-inline: calc(var(--section-padding) / 2);
+
+      & > div:not(:first-child, :last-child) {
+        padding: 4rem 2rem;
+        align-self: flex-end;
+
+        & > p:first-of-type {
+          font-size: 3rem;
+        }
+      }
+    }
+  }
+}
+
+.automatedSectionBgContainer {
+  width: 100%;
+  height: 90%;
+  background-color: var(--primary700);
+  position: absolute;
+  left: 0;
+  z-index: -1;
+  overflow: hidden;
+  bottom: 0;
+
+  & > img {
+    position: absolute;
+    width: 20rem;
+    height: 20rem;
+    object-fit: contain;
+  }
+
+  & > img:first-of-type {
+    top: -3rem;
+    left: 0;
+    transform: rotate(-180deg);
+  }
+
+  & > img:last-child {
+    bottom: -3rem;
+    right: 0;
+  }
+}
+
+.contactSection {
+  text-align: center;
+
+  & > div:first-of-type {
+    padding: 5rem 3rem;
+    background-color: var(--white);
+    box-shadow: 0 1.3rem 33.6px 0 #257a4926;
+
+    & > h3 {
+      text-transform: capitalize;
+      font-weight: 600;
+      font-size: 2rem;
+    }
+
+    & > p {
+      margin-bottom: 2rem;
+    }
+  }
+
+  @media screen and (min-width: 43.75em) {
+    & > div:first-child {
+      & > h3 {
+        font-size: 2.5rem;
+      }
+    }
+  }
+
+  @media screen and (min-width: 56.25em) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    text-align: left;
+
+    & > div:first-of-type {
+      width: 56rem;
+      position: relative;
+      right: -2rem;
+      z-index: 1;
+      padding-left: 10rem;
+
+      & > p {
+        margin-bottom: 3rem;
+      }
+    }
+  }
+
+  @media screen and (min-width: 62.5em) {
+    & > div:first-of-type {
+      & > h3 {
+        font-size: 3rem;
+      }
+    }
+  }
+}
+
+.contactSectionImageContainer {
+  display: none;
+
+  @media screen and (min-width: 56.25em) {
+    position: relative;
+    display: block;
+    max-width: 45rem;
+    overflow: hidden;
+    height: inherit;
+    display: flex;
+    align-items: flex-end;
+    max-width: 50rem;
+
+    & > img:first-of-type {
+      position: absolute;
+      bottom: 0;
+      z-index: -1;
+    }
+  }
+}
