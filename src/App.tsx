@@ -1,5 +1,5 @@
-import { BrowserRouter as Router } from "react-router-dom";
-import RoutesFiles from "./components/Routes";
+import { BrowserRouter as Router } from 'react-router-dom';
+import RoutesFiles from './components/Routes';
 // import Link from "./components/link";
 
 const App = () => {

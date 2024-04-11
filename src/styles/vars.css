@@ -1,17 +1,16 @@
 :root {
+  /* fonts  */
+  --font-inter: 'Inter', sans-serif;
+  --font-space-g: 'Space Grotesk', sans-serif;
 
-	/* fonts  */
-	--font-inter:  "Inter", sans-serif;
-	--font-space-g:"Space Grotesk", sans-serif;
+  /* colors  */
+  --primary700: #4263eb;
+  --primary500: #5b7af6;
+  --primary400: #4f7fe5;
+  --primary200: #dee9fb;
+  --white: #ffffff;
 
-	/* colors  */
-	--primary700: #4263eb;
-	--primary500: #5b7af6;
-	--primary400: #4F7FE5;
-	--primary200: #DEE9FB;
-	--white: #ffffff;
-
-	/* max-width  */
-	--max-width: 140rem;
-	--extra-width: calc(100% - var(--max-width));
+  /* max-width  */
+  --max-width: 140rem;
+  --extra-width: calc(100% - var(--max-width));
 }

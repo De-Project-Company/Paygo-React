@@ -1,94 +1,90 @@
 .footer {
-   background-color: var(--primary700);
-   color: var(--white);
-   padding-block: 3rem;
-   font-size: 1.3rem;
-   justify-content: space-between;
+  background-color: var(--primary700);
+  color: var(--white);
+  padding-block: 3rem;
+  font-size: 1.3rem;
+  justify-content: space-between;
 
-   & > div {
-      & > *:first-child {
-         margin-bottom: 2rem ;
-      }
+  & > div {
+    & > *:first-child {
+      margin-bottom: 2rem;
+    }
 
-      flex-basis: 50%;
-      @media screen and (min-width: 56.25em) {
-         max-width: 55rem;
-      }
+    flex-basis: 50%;
+    @media screen and (min-width: 56.25em) {
+      max-width: 55rem;
+    }
+  }
 
-   }
-
-   @media screen and (min-width: 56.25em) {
-      display: flex;
-      gap: 3rem;
-   }
+  @media screen and (min-width: 56.25em) {
+    display: flex;
+    gap: 3rem;
+  }
 }
 
 .footerSubContainer {
-   flex-direction: column;
-   justify-content: space-between;
-   
-   &, & > * {
-      display: flex;
-      gap: 2rem;
-   }
-   
+  flex-direction: column;
+  justify-content: space-between;
+
+  &,
+  & > * {
+    display: flex;
+    gap: 2rem;
+  }
 }
 
 .footerNavItems {
-   text-transform: capitalize;
-   justify-content: space-between;
-   padding-block: 1rem;
-   font-size: 1.6rem ;
-   display: block;
-   margin-top: 3rem;
-   
-   @media screen and (min-width: 48em) {
-      display: flex;
-      border-bottom: 1px solid currentColor;
-   }
-   
-   @media screen and (min-width: 56.25em) {
-      font-size: 2rem;
-      margin: 0;
-   }
+  text-transform: capitalize;
+  justify-content: space-between;
+  padding-block: 1rem;
+  font-size: 1.6rem;
+  display: block;
+  margin-top: 3rem;
+
+  @media screen and (min-width: 48em) {
+    display: flex;
+    border-bottom: 1px solid currentColor;
+  }
+
+  @media screen and (min-width: 56.25em) {
+    font-size: 2rem;
+    margin: 0;
+  }
 }
 
-
 .socials {
-   display: flex;
-   gap: 1rem;
+  display: flex;
+  gap: 1rem;
 
-   & > li > a > svg {
-      width: 1.7rem;
-      height: 1.7rem;
-   }
+  & > li > a > svg {
+    width: 1.7rem;
+    height: 1.7rem;
+  }
 }
 
 .copyright {
-   display: flex;
-   align-items: center;
-   justify-content: space-between;
-   gap: 2rem;
-   flex-direction: column-reverse;
-   
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-direction: column-reverse;
 
-   @media screen and (min-width: 48em) {
-      flex-direction: row;
-   }
+  @media screen and (min-width: 48em) {
+    flex-direction: row;
+  }
 }
 
 .privacyPolicyFlex {
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   gap: 2rem;
-   
-   @media screen and (max-width: 47.9375em) {
-      width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
 
-   }
+  @media screen and (max-width: 47.9375em) {
+    width: 100%;
+  }
 }
 
 .automatedInvoicingSection {
-   background-color: var(--white);
+  background-color: var(--white);
 }
