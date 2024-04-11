@@ -7,7 +7,7 @@ import { useState } from 'react'
 import { clsx } from 'clsx'
 import ShowView from '../show-view/show-view'
 
-const navItems = [
+export const navItems = [
    {
       link: '/',
       label: 'home'
@@ -49,16 +49,13 @@ const Header = () => {
                   isOpen && headerStyles.open)}
             >
                <ul>
-                  <ShowView when={isOpen}>
                      <button
                         className={clsx(headerStyles.menuBtn, headerStyles.close)}
                         aria-label="close-sidebar"
                         onClick={handleCloseSideBar}
                      >
                         <SvgIcon name='close' />
-                     </button>
-
-                  </ShowView>
+                  </button>
                   {navItems.map(navItem => (
                      <li key={navItem.label}>
                         <a href={navItem.link} className={headerStyles.navItem}>{navItem.label}</a>
