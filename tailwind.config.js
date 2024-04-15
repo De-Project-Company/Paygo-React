@@ -9,6 +9,7 @@ export default {
       fontFamily: {
         sans: ["'Open Sans'", "sans-serif"],
       },
+
       colors: {
         blue: {
           50: "#ebf3fe",
