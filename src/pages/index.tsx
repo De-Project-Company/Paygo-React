@@ -1,81 +1,43 @@
 import clsx from 'clsx';
 
 import Header from '../components/header/header';
+import SvgIcon from '../components/svg-icon/svg-icon';
+import Footer from '../components/footer/footer';
 
 import commonStyles from '../styles/common.module.css';
 import homePageStyles from '../styles/home.module.css';
-import SvgIcon from '../components/svg-icon/svg-icon';
-import { ISvgIconNameTypes } from '../types/svg-icon-type';
-import Footer from '../components/footer/footer';
+import { benefits, features, howItWorks, testimonialData } from '../data/home-page-data';
+import { useState } from 'react';
+import { ITestimonialTypes } from '../types/home-page-data-types';
 
-interface IDataProps {
-  icon: ISvgIconNameTypes;
-  title: string;
-  description: string;
-}
-
-const features: IDataProps[] = [
-  {
-    title: 'Easy Invoice Creation',
-    description:
-      'Invoicing has never been so simple. With our easy-to-use interface and powerful features, you can create and manage invoices with ease',
-    icon: 'create',
-  },
-  {
-    title: 'Real-time updates',
-    description:
-      "With real-time updates, you'll always have the most up- to - date information at your fingertips.You'll be able to track payments manage client information, and view invoice statuses instantly",
-    icon: 'notification',
-  },
-  {
-    title: 'Customizable Templates',
-    description:
-      'With Invoice Suite, you can create beautiful invoices that showcase your unique brand personality. Make a lasting impression with every invoice you send',
-    icon: 'customize',
-  },
-];
-
-const benefits = [
-  {
-    title: '30% Reduction in Late Payments:',
-    description:
-      'Enjoy consistent cash flow and say goodbye to chasing invoices.',
-  },
-  {
-    title: '50% More Time Focus',
-    description:
-      'Automate tasks, eliminate administrative burdens, and reclaim precious hours.',
-  },
-  {
-    title: 'Increased Customer Satisfaction',
-    description:
-      'Automate tasks, eliminate administrative burdens, and reclaim precious hours.',
-  },
-];
-
-const howItWorks: IDataProps[] = [
-  {
-    icon: 'template',
-    title: 'Choose a Template',
-    description: 'Select from a variety of beautifully designed templates',
-  },
-  {
-    icon: 'customize',
-    title: 'Customize Details',
-    description:
-      'Easily add your business logo, item descriptions, and payment terms.',
-  },
-  {
-    icon: 'download',
-    title: 'Send or Download Invoice',
-    description: 'Send invoices directly to clients or download for offline ',
-  },
-];
 
 const Home = () => {
+  const [activeIndex, setActiveIndex] = useState(0)
+
+  const activeTestimonial: ITestimonialTypes = testimonialData[activeIndex];
+
+  // get next and previous button background image 
+  const prevIndex = activeIndex > 0 ? activeIndex - 1 : testimonialData.length - 1;
+  const nextIndex = activeIndex < testimonialData.length - 1 ? activeIndex + 1 : 0;
+  const prevItem = testimonialData[prevIndex];
+  const nextItem = testimonialData[nextIndex];
+
+  const handlePagination = (page: number) => {
+    let newIndex = page;
+
+    if (newIndex < 0) {
+      newIndex = testimonialData.length - 1;
+    } else if (newIndex >= testimonialData.length) {
+      newIndex = 0;
+    }
+
+    setActiveIndex(newIndex);
+  }
+
   return (
     <>
       <Header />
+      {/* hero section  */}
       <section className={homePageStyles.heroSection}>
         <img
           src="/assets/hero-bg.png"
@@ -120,7 +82,9 @@ const Home = () => {
         </div>
       </section>
 
+      {/* core features section  */}
       <section
+        id='features'
         className={clsx(
           commonStyles.fullBleed,
           homePageStyles.coreFeaturesSection
@@ -144,6 +108,7 @@ const Home = () => {
         </div>
       </section>
 
+      {/* benefits section  */}
       <section
         className={clsx(commonStyles.fullBleed, homePageStyles.benefitsSection)}
       >
@@ -173,7 +138,9 @@ const Home = () => {
         </div>
       </section>
 
+      {/* how it works section  */}
       <section
+        id='how-it-works'
         className={clsx(
           commonStyles.fullBleed,
           homePageStyles.sectionPadding,
@@ -205,6 +172,7 @@ const Home = () => {
         </div>
       </section>
 
+      {/* testimonials section  */}
       <section
         className={clsx(
           commonStyles.fullBleed,
@@ -225,53 +193,58 @@ const Home = () => {
           <button
             className={homePageStyles.testimonyPaginationButton}
             aria-label="previous"
+            onClick={() => handlePagination(activeIndex - 1)}
           >
-            <img src="/assets/testimony-2-avatar.png" alt="" />
+            <img src={prevItem.image} alt="" />
             <SvgIcon name="arrow-left" />
           </button>
           <div className={homePageStyles.testimonyCard}>
             <div>
-              <img src="/assets/testimony-1-avatar.png" alt="" />
+              <img src={activeTestimonial.image} alt="" />
             </div>
 
             <div>
               <div className={homePageStyles.testimonyQuoteMark}>
                 <SvgIcon name="quote" />
               </div>
-              <p>
-                PayGO has truly transformed our invoicing process. The
-                simplicity and efficiency have saved us valuable time and
-                improved our cash flow.
-              </p>
+              <p>{activeTestimonial.testimony} </p>
 
               <div>
                 <p>
-                  <strong>Bisi Oge</strong>
+                  <strong>{activeTestimonial.name}</strong>
                 </p>
 
-                <p>Founder XYZ Company</p>
+                <p>{activeTestimonial.companyAndRole}</p>
               </div>
             </div>
           </div>
           <button
             className={homePageStyles.testimonyPaginationButton}
             aria-label="next"
+            onClick={() => handlePagination(activeIndex + 1)}
           >
-            <img src="/assets/testimony-3-avatar.png" alt="" />
+            <img src={nextItem.image} alt="" />
             <SvgIcon name="arrow-right" />
           </button>
         </div>
 
         <div className={homePageStyles.mobilePagination}>
-          <button>
+          <button
+            aria-label="previous"
+            onClick={() => handlePagination(activeIndex - 1)}
+          >
             <SvgIcon name="arrow-left" />
           </button>
-          <button>
+          <button
+            aria-label="next"
+            onClick={() => handlePagination(activeIndex + 1)}
+          >
             <SvgIcon name="arrow-right" />
           </button>
         </div>
       </section>
 
+      {/* pricing section  */}
       <section
         className={clsx(
           commonStyles.fullBleed,
@@ -286,7 +259,7 @@ const Home = () => {
           <div
             className={clsx(
               homePageStyles.pricingCard,
-              homePageStyles.secondary
+              // homePageStyles.secondary
             )}
           >
             <div>
@@ -297,7 +270,7 @@ const Home = () => {
 
             <button>Get Started</button>
           </div>
-
+          {/*
           <div className={homePageStyles.pricingCard}>
             <div>
               <h3>Pro Plan</h3>
@@ -316,10 +289,11 @@ const Home = () => {
             </div>
 
             <button>Get Started</button>
-          </div>
+          </div> */}
         </div>
       </section>
 
+      {/* free trial banner section  */}
       <section
         className={clsx(
           homePageStyles.sectionPadding,
@@ -350,7 +324,9 @@ const Home = () => {
         </div>
       </section>
 
+      {/* contact section  */}
       <section
+        id='contact-us'
         className={clsx(
           commonStyles.fullBleed,
           homePageStyles.sectionPadding,

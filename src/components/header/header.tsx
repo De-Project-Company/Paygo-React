@@ -13,15 +13,15 @@ export const navItems = [
     label: 'home',
   },
   {
-    link: '#',
+    link: '#features',
     label: 'features',
   },
   {
-    link: '#',
+    link: '#how-it-works',
     label: 'how it works',
   },
   {
-    link: '#',
+    link: '#features',
     label: 'contact us',
   },
 ];

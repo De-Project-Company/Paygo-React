@@ -268,9 +268,14 @@
     max-width: 29rem;
     padding: 2rem 0;
     z-index: 1;
+    transition: transform 0.2s ease-in-out;
 
     & > p:first-of-type {
       font-family: 'Space Grotesk', sans-serif;
+    }
+
+    &:hover {
+      transform: scale(1.1);
     }
   }
 }
@@ -650,7 +655,7 @@
     }
   }
 
-  @media screen and (min-width: 56.25em) {
+  @media screen and (min-width: 56.25em) {    
     display: flex;
     align-items: center;
     justify-content: center;
