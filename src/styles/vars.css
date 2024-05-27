@@ -13,4 +13,5 @@
   /* max-width  */
   --max-width: 140rem;
   --extra-width: calc(100% - var(--max-width));
+  --full-bleed: calc(var(--extra-width) / 2)
 }

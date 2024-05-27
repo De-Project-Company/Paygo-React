@@ -2,7 +2,31 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  label {
+    @apply block cursor-pointer;
+  }
 
+  input {
+    @apply w-full;
+  }
+
+  .full-bleed {
+    @apply px-[--full-bleed];
+  }
+
+  .auth-input {
+    @apply border-1 py-[14px] px-[19px] rounded-lg border-[#DEE2E6] mt-2 focus:border-brand-gray-100 focus:outline-none;
+  }
+
+  .primary-padding {
+    @apply overflow-y-visible px-5 md:px-9 2xl:px-[--full-bleed];
+  }
+
+  .text-error {
+    @apply text-red-600;
+  }
+}
 
 
 ::-webkit-scrollbar {
