@@ -29,7 +29,7 @@ const SignUp = () => {
 
       <div className="lg:grid lg:grid-cols-2 gap-6 justify-center [&>div]:max-w-[600px] pb-16  primary-padding">
         <div className="hidden lg:block w-full">
-          <img src="/assets/sign-up-mockup-img.png" alt="sign up mockup" className="w-full" />
+          <img src="/assets/sign-in-mockup.png" alt="sign up mockup" className="w-full" />
         </div>
 
         <div className="bg-white p-10 w-full mx-auto border-1 border-[#DEE2E6] h-max rounded-xl">
