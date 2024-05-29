@@ -25,7 +25,7 @@ const SignUp = () => {
     })
   }
   return (
-    <AuthLayout linkData={{ route: routes.signIn(), label: 'Login to existing account' }}>
+    <AuthLayout linkData={{ route: routes.signUp(), label: 'Create account' }}>
 
       <div className="lg:grid lg:grid-cols-2 gap-6 justify-center [&>div]:max-w-[600px] pb-16  primary-padding">
         <div className="hidden lg:block w-full">
