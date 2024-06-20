@@ -3,6 +3,10 @@ import { useMutation } from '@tanstack/react-query';
 import { api } from '../utils'
 import ReactQueryKeys from '../keys'
 
+
+// TODO: REMOVE THIS AFTERWARDS
+
+const baseURl = 'https://paygoapi.startershouse.com/api';
 export interface ISignUpPayload {
    email: string;
    phone_number: string;
@@ -17,7 +21,7 @@ interface ISubmitSignUpResponse {
 const submitSignUpRequest = async (
    data: ISignUpPayload
 ): Promise<ISubmitSignUpResponse> => {
-   const response = await api.post('/auth/register', data);
+   const response = await api.post(`${baseURl}/auth/register`, data);
    return response.data;
 };
 

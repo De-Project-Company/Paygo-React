@@ -7,14 +7,16 @@ import SignUp from "../pages/SignUp";
 import ClientPage from "../pages/ClientPage";
 import { routes } from "../lib/routes";
 
+
+// TODO: Changes made here
 const RoutesFiles = () => {
   return (
     <Routes>
       <Route path={routes.home()} element={<Home />} />
       <Route path={routes.dashboard()} element={<Dashboard />} />
       <Route path={routes.projects()} element={<Projects />} />
-      <Route path={routes.signIn()} element={<Signin />} />
-      <Route path={routes.signUp()} element={<SignUp />} />
+      <Route path="/sign-in" element={<Signin />} />
+      <Route path="/sign-up" element={<SignUp />} />
       <Route path={routes.clients()} element={<ClientPage />} />
     </Routes>
   );
