@@ -4,7 +4,7 @@ import { api } from '../utils'
 import ReactQueryKeys from '../keys'
 
 
-// TODO: REMOVE THIS AFTERWARDS
+// TODO: REMOVE THIS AFTERWARDS AND MORE
 
 const baseURl = 'https://paygoapi.startershouse.com/api';
 export interface ISignUpPayload {
