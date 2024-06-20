@@ -62,7 +62,7 @@ const Header = () => {
             ))}
           </ul>
 
-          <a href="#" className={common.btn}>
+          <a href="/sign-in" className={common.btn}>
             Get Started
           </a>
         </div>
