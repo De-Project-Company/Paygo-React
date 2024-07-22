@@ -7,8 +7,8 @@ import common from '@/styles/common.module.css';
 const VerificationSuccessPage = () => {
   return (
     <AuthLayout>
-      <div className="p-10 max-w-[1000px] bg-white mx-auto rounded-xl">
-        <div className="mx-auto  text-center w-max">
+      <div className="p-10 w-full lg:max-w-[1000px] bg-white mx-auto rounded-xl">
+        <div className="mx-auto  text-center lg:w-max">
           <div className="w-full max-w-[300px] mx-auto aspect-square ">
             <img
               src="/assets/verified.png"
