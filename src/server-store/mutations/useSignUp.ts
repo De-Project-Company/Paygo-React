@@ -1,36 +1,38 @@
-
 import { useMutation } from '@tanstack/react-query';
-import { api } from '../utils'
-import ReactQueryKeys from '../keys'
 
+import { toast } from 'sonner';
 
-// TODO: REMOVE THIS AFTERWARDS
-
-const baseURl = 'https://paygoapi.startershouse.com/api';
+import { useStore } from '../../client-store';
+import { ISubmitSignUpResponse } from '../../types/auth,types';
+import ReactQueryKeys from '../keys';
+import { api } from '../utils';
 export interface ISignUpPayload {
-   email: string;
-   phone_number: string;
-   password: string;
-   password_confirmation: string;
-}
-
-interface ISubmitSignUpResponse {
-
+  email: string;
+  phone_number: string;
+  password: string;
+  password_confirmation: string;
 }
 
 const submitSignUpRequest = async (
-   data: ISignUpPayload
+  data: ISignUpPayload
 ): Promise<ISubmitSignUpResponse> => {
-   const response = await api.post(`${baseURl}/auth/register`, data);
-   return response.data;
+  const response = await api.post(`/auth/register`, data);
+  return response.data;
 };
 
+const useSignup = (reset: () => void) => {
+  const setUser = useStore((state) => state.setUser);
 
-const useSignup = () => {
-   return useMutation({
-      mutationKey: ReactQueryKeys.SIGN_UP,
-      mutationFn: submitSignUpRequest,
-   });
+  return useMutation({
+    mutationKey: ReactQueryKeys.SIGN_UP,
+    mutationFn: submitSignUpRequest,
+    onSuccess: (data) => {
+      setUser(data.user);
+      toast.success('sign-up successful');
+      reset();
+    },
+    onError: async () => toast.error('Sign up failed'),
+  });
 };
 
 export default useSignup;
