@@ -2,8 +2,9 @@ import { useMutation } from '@tanstack/react-query';
 
 import { toast } from 'sonner';
 
-import { useStore } from '../../client-store';
-import { ISubmitSignUpResponse } from '../../types/auth,types';
+import { maskEmail } from '@/utils/mask-email';
+import { useStore } from '@/client-store';
+import { ISubmitSignUpResponse } from '@/types/auth,types';
 import ReactQueryKeys from '../keys';
 import { api } from '../utils';
 export interface ISignUpPayload {
@@ -28,10 +29,18 @@ const useSignup = (reset: () => void) => {
     mutationFn: submitSignUpRequest,
     onSuccess: (data) => {
       setUser(data.user);
-      toast.success('sign-up successful');
+      toast.success(
+        `We've sent a verification email to ${maskEmail(data.user.email)}.  Click the link in the email to activate your account.`,
+        {
+          duration: 2 * 60 * 1000,
+        }
+      );
       reset();
     },
-    onError: async () => toast.error('Sign up failed'),
+    onError: () =>
+      toast.error(
+        'There was a problem with your signup. Please try again later.'
+      ),
   });
 };
 
