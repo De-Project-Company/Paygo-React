@@ -101,7 +101,7 @@ const SignUp = () => {
                 type="password"
                 id="password"
                 {...register('password', {
-                  required: 'Please enter your email',
+                  required: 'Create a password',
                   validate: {
                     hasUppercase: (value) =>
                       /[A-Z]/.test(value) ||

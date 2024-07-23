@@ -12,8 +12,20 @@ const App = () => {
       <Router>
         <RoutesFiles />
       </Router>
+
+      <Toaster
+        position="top-right"
+        toastOptions={{
+          classNames: {
+            toast: 'p-5 items-start gap-4',
+            icon: 'mt-2',
+          },
+        }}
+        expand
+        richColors
+      />
+
       <ReactQueryDevtools />
-      <Toaster position="top-right" expand richColors />
     </QueryClientProvider>
   );
 };
