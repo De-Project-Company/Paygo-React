@@ -12,4 +12,9 @@ export type ISvgIconNameTypes =
   | 'facebook'
   | 'quote'
   | 'arrow-right'
-  | 'arrow-left';
+  | 'arrow-left'
+  | 'layout'
+  | 'settings'
+  | 'invoice'
+  | 'people'
+  | 'bell';

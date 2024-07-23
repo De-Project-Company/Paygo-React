@@ -16,7 +16,7 @@
   }
 
   .auth-input {
-    @apply border-1 py-[14px] px-[19px] rounded-lg border-[#DEE2E6] mt-2 focus:border-brand-gray-100 focus:outline-none;
+    @apply border py-[14px] px-[19px] rounded-lg border-[#DEE2E6] mt-2 focus:border-brand-gray-100 focus:outline-none;
   }
 
   .primary-padding {
@@ -27,7 +27,6 @@
     @apply text-red-600;
   }
 }
-
 
 ::-webkit-scrollbar {
   height: 0px;
