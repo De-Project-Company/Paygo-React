@@ -6,6 +6,7 @@ import headerStyles from './header.module.css';
 import { useState } from 'react';
 import { clsx } from 'clsx';
 import ShowView from '../show-view/show-view';
+import { routes } from '@/lib/routes';
 
 export const navItems = [
   {
@@ -62,7 +63,7 @@ const Header = () => {
             ))}
           </ul>
 
-          <a href="/sign-in" className={common.btn}>
+          <a href={routes.signUp()} className={common.btn}>
             Get Started
           </a>
         </div>
