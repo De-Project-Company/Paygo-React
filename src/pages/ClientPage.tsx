@@ -1,11 +1,5 @@
-import Header from "../components/header/header";
-
 const CLientPage = () => {
-  return (
-    <>
-      <Header />
-    </>
-  );
+  return <>Settings</>;
 };
 
 export default CLientPage;
