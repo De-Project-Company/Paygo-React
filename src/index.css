@@ -3,8 +3,23 @@
 @tailwind utilities;
 
 @layer base {
+  body {
+    @apply text-[14px];
+  }
+
+  input:disabled {
+    @apply cursor-not-allowed;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-bold;
+  }
   label {
-    @apply block cursor-pointer;
+    @apply block cursor-pointer font-semibold;
   }
 
   input {
@@ -16,7 +31,7 @@
   }
 
   .auth-input {
-    @apply border py-[14px] px-[19px] rounded-lg border-[#DEE2E6] mt-2 focus:border-brand-gray-100 focus:outline-none;
+    @apply border py-3 px-5 rounded-lg border-[#DEE2E6] mt-2 focus:border-brand-gray-100 focus:outline-none;
   }
 
   .primary-padding {

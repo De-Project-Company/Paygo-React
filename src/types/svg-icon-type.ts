@@ -17,4 +17,11 @@ export type ISvgIconNameTypes =
   | 'settings'
   | 'invoice'
   | 'people'
-  | 'bell';
+  | 'bell'
+  | 'search'
+  | 'plus'
+  | 'invoice'
+  | 'money-bill'
+  | 'clock'
+  | 'chart-breakout-square'
+  | 'line-chart';
