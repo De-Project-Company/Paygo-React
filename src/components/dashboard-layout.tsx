@@ -44,13 +44,14 @@ const DashboardLayout = () => {
   };
 
   return (
-    <div className="lg:flex w-full">
+    <div className="lg:flex w-full h-screen lg:overflow-hidden text-[14px]">
       <ShowView when={isOpen}>
         <div
-          className="fixed h-lvh w-full bg-blue-50/[.8] top-0 left-0 lg:hidden z-5 "
+          className="fixed h-lvh w-full bg-blue-50/[.8] backdrop-blur-sm top-0 left-0 lg:hidden z-5 "
           onClick={handleIsOpen}
         />
       </ShowView>
+
       <aside
         className={`flex flex-col [&>*]:py-[3rem] [&>*]:pl-8 w-full max-w-[500px] lg:max-w-[25rem]  h-screen text-white fixed top-0 left-0 lg:relative lg:left-0 transition-all duration-200 ease-linear z-10
                ${isOpen ? 'translate-x-0  shadow-2xl' : '-translate-x-[100%] lg:translate-x-0'}
@@ -96,8 +97,8 @@ const DashboardLayout = () => {
       </aside>
 
       <>
-        <nav className="py-6 px-8 flex w-full justify-between lg:hidden">
-          <div className="bg-white ">
+        <nav className="py-6 px-8 flex w-full bg-white z-5 justify-between sticky top-0 lg:hidden shadow-md">
+          <div>
             <Logo />
           </div>
 
@@ -115,7 +116,7 @@ const DashboardLayout = () => {
           </button>
         </nav>
 
-        <main className="p-7">
+        <main className="p-7 flex-1 overflow-y-auto">
           <Outlet />
         </main>
       </>
